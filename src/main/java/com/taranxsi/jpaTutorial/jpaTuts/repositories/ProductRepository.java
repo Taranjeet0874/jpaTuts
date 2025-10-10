@@ -15,4 +15,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
     List<ProductEntity> findByCreatedAtAfter(LocalDateTime after);
 
     List<ProductEntity> findByQuantityAndPrice(int quantity, BigDecimal price);
+
+    List<ProductEntity> findByTitleLike(String title);
+    
+    List<ProductEntity> findByTitleContaining(String title);
 }
